@@ -17,7 +17,7 @@ pipeline {
 				mvn test
 			}
 		}
-		stage('build project){
+		stage('build project'){
 		      steps{
 			      echo "buiding the project..."
 			      mvn package
