@@ -14,13 +14,13 @@ pipeline {
 		stage('test roject...'){
 			steps{
 				echo "testing ...."
-				mvn test
+				sh 'mvn test'
 			}
 		}
 		stage('build project'){
 		      steps{
 			      echo "buiding the project..."
-			      mvn package
+			      sh 'mvn package'
 		      }
 		}
 	}
