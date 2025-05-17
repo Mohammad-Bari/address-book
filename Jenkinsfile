@@ -23,6 +23,10 @@ pipeline {
 			      sh 'mvn package'
 		      }
 		}
+		stage('deploy in tomcat'){
+			echo "aplication deploying...."
+			deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat_credentials', path: '', url: 'http://13.126.176.182:9090/')], contextPath: null, war: '**/*.war'
+		}
 	}
 	
 }
