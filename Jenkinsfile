@@ -7,7 +7,7 @@ pipeline {
 		stage('cloning git project'){
 			steps{
 				echo "project cloning....."
-				git branch: 'master'
+				git branch: 'master',
 				    url: 'https://github.com/Mohammad-Bari/address-book.git'
 			}
 		}
