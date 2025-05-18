@@ -30,6 +30,12 @@ pipeline {
 			}
 			
 		}
+		stage('email notification'){
+			echo "notification..."
+			steps{
+				emailext attachLog: true, body: 'hi, please check the issue', compressLog: true, recipientProviders: [developers()], subject: 'notification ', to: 'nooraliulbari@gmail.com'
+			}
+		}
 	}
 	
 }
